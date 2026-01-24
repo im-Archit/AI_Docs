@@ -19,31 +19,6 @@ The architecture mirrors real-world enterprise document processing systems used 
 
 ---
 
-## Component Diagram (Logical)
-[ Web App (Next.js) ]
-|
-v
-[ Upload API Service ]
-|
-v
-[ Cloud Storage (GCS) ]
-|
-v
-[ Pub/Sub Event: DocumentUploaded ]
-|
-v
-[ Pipeline Orchestrator ]
-|        |        |
-v        v        v
-[ OCR ]  [ Classifier ]  [ Risk Engine ]
-\        |        /
-[ Results Store ]
-|
-v
-[ Dashboard + APIs ]
-
----
-
 ## Design Principles
 
 - **Event-driven**: No tight coupling between services
