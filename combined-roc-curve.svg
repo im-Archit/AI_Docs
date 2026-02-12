@@ -1,0 +1,82 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background and grid -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa" />
+  <g stroke="#e0e0e0" stroke-width="1">
+    <!-- Grid lines -->
+    <line x1="100" y1="500" x2="700" y2="500" />
+    <line x1="100" y1="400" x2="700" y2="400" />
+    <line x1="100" y1="300" x2="700" y2="300" />
+    <line x1="100" y1="200" x2="700" y2="200" />
+    <line x1="100" y1="100" x2="700" y2="100" />
+    
+    <line x1="100" y1="500" x2="100" y2="100" />
+    <line x1="220" y1="500" x2="220" y2="100" />
+    <line x1="340" y1="500" x2="340" y2="100" />
+    <line x1="460" y1="500" x2="460" y2="100" />
+    <line x1="580" y1="500" x2="580" y2="100" />
+    <line x1="700" y1="500" x2="700" y2="100" />
+  </g>
+
+  <!-- Axes -->
+  <line x1="100" y1="500" x2="700" y2="500" stroke="#333" stroke-width="2" />
+  <line x1="100" y1="100" x2="100" y2="500" stroke="#333" stroke-width="2" />
+  
+  <!-- Axes labels -->
+  <text x="400" y="550" text-anchor="middle" font-family="Arial" font-size="20" fill="#333">False Positive Rate</text>
+  <text x="40" y="300" text-anchor="middle" font-family="Arial" font-size="20" fill="#333" transform="rotate(-90, 40, 300)">True Positive Rate</text>
+  
+  <!-- Axes ticks and values -->
+  <g font-family="Arial" font-size="14" text-anchor="middle" fill="#333">
+    <text x="100" y="520">0.0</text>
+    <text x="220" y="520">0.2</text>
+    <text x="340" y="520">0.4</text>
+    <text x="460" y="520">0.6</text>
+    <text x="580" y="520">0.8</text>
+    <text x="700" y="520">1.0</text>
+    
+    <text x="80" y="500">0.0</text>
+    <text x="80" y="400">0.2</text>
+    <text x="80" y="300">0.4</text>
+    <text x="80" y="200">0.6</text>
+    <text x="80" y="100">0.8</text>
+    <text x="80" y="0">1.0</text>
+  </g>
+  
+  <!-- Baseline -->
+  <line x1="100" y1="500" x2="700" y2="100" stroke="#999" stroke-width="1.5" stroke-dasharray="5,5" />
+  
+  <!-- ROC Curves -->
+  <!-- Heart Disease (AUC = 0.92) -->
+  <path d="M100,500 Q140,250 220,150 Q300,120 460,90 Q600,60 700,25" stroke="#E74C3C" stroke-width="3" fill="none" />
+  
+  <!-- Kidney Disease (AUC = 1.00) -->
+  <path d="M100,500 L100,100 L700,100" stroke="#3498DB" stroke-width="3" fill="none" />
+  
+  <!-- Liver Disease (AUC = 0.99) -->
+  <path d="M100,500 L105,105 L700,100" stroke="#2ECC71" stroke-width="3" fill="none" />
+  
+  <!-- Diabetes (AUC = 0.83) -->
+  <path d="M100,500 Q200,350 340,200 Q450,150 600,120 Q650,110 700,75" stroke="#F39C12" stroke-width="3" fill="none" />
+  
+  <!-- Legend -->
+  <rect x="500" y="160" width="180" height="125" fill="white" stroke="#333" stroke-width="1" rx="5" />
+  
+  <g font-family="Arial" font-size="14">
+    <text x="580" y="180" text-anchor="middle" font-weight="bold">ROC Curves</text>
+    
+    <line x1="520" y1="200" x2="550" y2="200" stroke="#E74C3C" stroke-width="3" />
+    <text x="635" y="205" text-anchor="start">Heart (AUC=0.92)</text>
+    
+    <line x1="520" y1="230" x2="550" y2="230" stroke="#3498DB" stroke-width="3" />
+    <text x="635" y="235" text-anchor="start">Kidney (AUC=1.00)</text>
+    
+    <line x1="520" y1="260" x2="550" y2="260" stroke="#2ECC71" stroke-width="3" />
+    <text x="635" y="265" text-anchor="start">Liver (AUC=0.99)</text>
+    
+    <line x1="520" y1="290" x2="550" y2="290" stroke="#F39C12" stroke-width="3" />
+    <text x="635" y="295" text-anchor="start">Diabetes (AUC=0.83)</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#333">Combined ROC Curves for Multi-Disease Screening Platform</text>
+</svg>
